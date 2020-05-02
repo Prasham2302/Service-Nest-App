@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CustomerController">
+    <stylesheets>
+        <URL value="@customer.css" />
+    </stylesheets>
+   <children>
+      <TabPane layoutX="-1.0" layoutY="34.0" prefHeight="365.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="MEDICAL">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox layoutX="22.0" layoutY="36.0" prefHeight="296.0" prefWidth="116.0">
+                           <children>
+                              <Label prefHeight="25.0" prefWidth="116.0" text="LOCATION" textAlignment="JUSTIFY" />
+                              <ChoiceBox fx:id="location_pick" prefHeight="30.0" prefWidth="116.0" />
+                              <Label fx:id="price_label" prefHeight="29.0" prefWidth="116.0" text="PRICE" />
+                              <Slider fx:id="price_slider" prefHeight="35.0" prefWidth="122.0" />
+                              <Label prefHeight="35.0" prefWidth="116.0" text="EXPERIENCE" />
+                              <ChoiceBox fx:id="exp_pick" prefHeight="27.0" prefWidth="116.0" />
+                              <Label prefHeight="32.0" prefWidth="116.0" text="RATINGS" />
+                              <ChoiceBox fx:id="ratings_pick" prefHeight="30.0" prefWidth="116.0" />
+                              <Label prefHeight="28.0" prefWidth="116.0" text="Profession" />
+                              <ChoiceBox fx:id="Profession_pick" prefWidth="150.0" />
+                           </children>
+                        </VBox>
+                        <Label layoutX="14.0" layoutY="4.0" prefHeight="21.0" prefWidth="74.0" text="Filter By:-" />
+                        <Button fx:id="Search_M" layoutX="70.0" layoutY="2.0" mnemonicParsing="false" onAction="#filter" prefHeight="25.0" prefWidth="57.0" text="Search" />
+                        <TableView fx:id="medical_table" layoutX="186.0" layoutY="4.0" prefHeight="294.0" prefWidth="362.0" />
+                        <Button fx:id="book" layoutX="466.0" layoutY="307.0" mnemonicParsing="false" onAction="#book_now" prefHeight="30.0" prefWidth="81.0" text="Book Now" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="EDUCATION">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox layoutX="16.0" layoutY="38.0" prefHeight="292.0" prefWidth="118.0">
+                           <children>
+                              <Label prefHeight="25.0" prefWidth="122.0" text="LOCATION" textAlignment="JUSTIFY" />
+                              <ChoiceBox fx:id="location_pick1" prefHeight="30.0" prefWidth="122.0" />
+                              <Label fx:id="price_label1" prefHeight="29.0" prefWidth="121.0" text="PRICE" />
+                              <Slider fx:id="price_slider1" prefHeight="36.0" prefWidth="116.0" />
+                              <Label prefHeight="35.0" prefWidth="122.0" text="EXPERIENCE" />
+                              <ChoiceBox fx:id="exp_pick1" prefHeight="26.0" prefWidth="122.0" />
+                              <Label prefHeight="31.0" prefWidth="122.0" text="RATINGS" />
+                              <ChoiceBox fx:id="ratings_pick1" prefHeight="30.0" prefWidth="123.0" />
+                              <Label prefHeight="28.0" prefWidth="123.0" text="Profession" />
+                              <ChoiceBox fx:id="Profession_pick1" prefHeight="25.0" prefWidth="117.0" />
+                           </children>
+                        </VBox>
+                        <Button fx:id="Search_M1" layoutX="68.0" layoutY="6.0" mnemonicParsing="false" onAction="#filter" prefHeight="25.0" prefWidth="57.0" text="Search" />
+                        <TableView fx:id="edu_table" layoutX="175.0" layoutY="4.0" prefHeight="294.0" prefWidth="369.0" />
+                        <Label layoutX="14.0" layoutY="8.0" prefHeight="21.0" prefWidth="74.0" text="Filter By:-" />
+                        <Button fx:id="book1" layoutX="445.0" layoutY="309.0" mnemonicParsing="false" onAction="#book_now" prefHeight="25.0" prefWidth="98.0" text="Book Now" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="DAY-TO-DAY">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox layoutX="22.0" layoutY="37.0" prefHeight="299.0" prefWidth="118.0">
+                           <children>
+                              <Label prefHeight="25.0" prefWidth="116.0" text="LOCATION" textAlignment="JUSTIFY" />
+                              <ChoiceBox fx:id="location_pick2" prefHeight="30.0" prefWidth="122.0" />
+                              <Label fx:id="price_label2" prefHeight="29.0" prefWidth="116.0" text="PRICE" />
+                              <Slider fx:id="price_slider2" prefHeight="36.0" prefWidth="116.0" />
+                              <Label prefHeight="35.0" prefWidth="116.0" text="EXPERIENCE" />
+                              <ChoiceBox fx:id="exp_pick2" prefHeight="27.0" prefWidth="121.0" />
+                              <Label prefHeight="32.0" prefWidth="116.0" text="RATINGS" />
+                              <ChoiceBox fx:id="ratings_pick2" prefHeight="30.0" prefWidth="122.0" />
+                              <Label prefHeight="28.0" prefWidth="116.0" text="Profession" />
+                              <ChoiceBox fx:id="Profession_pick2" prefHeight="26.0" prefWidth="121.0" />
+                           </children>
+                        </VBox>
+                        <Label layoutX="14.0" layoutY="14.0" prefHeight="21.0" prefWidth="74.0" text="Filter By:-" />
+                        <Button fx:id="Search_M2" layoutX="71.0" layoutY="12.0" mnemonicParsing="false" onAction="#filter" prefHeight="25.0" prefWidth="57.0" text="Search" />
+                        <TableView fx:id="dtd_table" layoutX="186.0" layoutY="6.0" prefHeight="294.0" prefWidth="367.0" />
+                        <Button fx:id="book2" layoutX="454.0" layoutY="309.0" mnemonicParsing="false" onAction="#book_now" prefHeight="25.0" prefWidth="98.0" text="Book Now" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Book Stores">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox layoutX="22.0" layoutY="72.0" prefHeight="296.0" prefWidth="116.0">
+                           <children>
+                              <Label prefHeight="25.0" prefWidth="116.0" text="LOCATION" textAlignment="JUSTIFY" />
+                              <ChoiceBox fx:id="location_pick3" prefHeight="30.0" prefWidth="116.0" />
+                              <Label prefHeight="32.0" prefWidth="116.0" text="Name" />
+                              <TextField fx:id="book_name" prefHeight="34.0" prefWidth="116.0" promptText="search Name" />
+                           </children>
+                        </VBox>
+                        <Label layoutX="14.0" layoutY="17.0" prefHeight="21.0" prefWidth="74.0" text="Filter By:-" />
+                        <Button fx:id="Search_M3" layoutX="69.0" layoutY="15.0" mnemonicParsing="false" onAction="#filter" prefHeight="25.0" prefWidth="57.0" text="Search" />
+                        <TableView fx:id="Books" layoutX="176.0" layoutY="4.0" prefHeight="287.0" prefWidth="369.0" />
+                        <Button fx:id="book_open" layoutX="463.0" layoutY="301.0" mnemonicParsing="false" onAction="#book_now" prefHeight="30.0" prefWidth="81.0" text="Open" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Laboratories">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox layoutX="22.0" layoutY="36.0" prefHeight="296.0" prefWidth="116.0">
+                           <children>
+                              <Label prefHeight="25.0" prefWidth="116.0" text="LOCATION" textAlignment="JUSTIFY" />
+                              <ChoiceBox fx:id="location_pick4" prefHeight="30.0" prefWidth="116.0" />
+                           </children>
+                        </VBox>
+                        <Label layoutX="14.0" layoutY="4.0" prefHeight="21.0" prefWidth="74.0" text="Filter By:-" />
+                        <Button fx:id="Search_M4" layoutX="70.0" layoutY="2.0" mnemonicParsing="false" onAction="#filter" prefHeight="25.0" prefWidth="57.0" text="Search" />
+                        <TableView fx:id="medical_table2" layoutX="175.0" layoutY="3.0" prefHeight="293.0" prefWidth="374.0" />
+                        <Button fx:id="book4" layoutX="467.0" layoutY="307.0" mnemonicParsing="false" onAction="#book_now" prefHeight="30.0" prefWidth="81.0" text="Open" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Your Orders">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="171.0" prefWidth="375.0">
+                     <children>
+                        <TableView fx:id="YourOrders" layoutX="17.0" layoutY="15.0" prefHeight="298.0" prefWidth="561.0" />
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Edit details">
+                <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="cust_name" layoutX="56.0" layoutY="27.0" promptText="Full Name" />
+                        <TextField fx:id="cust_email" layoutX="56.0" layoutY="71.0" prefHeight="25.0" prefWidth="232.0" promptText="Email Address" />
+                        <TextField fx:id="cust_age" layoutX="56.0" layoutY="113.0" prefHeight="25.0" prefWidth="47.0" promptText="Age" />
+                        <ChoiceBox fx:id="cust_gender" layoutX="187.0" layoutY="113.0" prefWidth="150.0" />
+                        <Label layoutX="131.0" layoutY="113.0" prefHeight="25.0" prefWidth="56.0" text="Gender :-" />
+                        <TextField fx:id="cust_mob" layoutX="56.0" layoutY="159.0" prefHeight="25.0" prefWidth="129.0" promptText="Mob No." />
+                        <TextField fx:id="cust_add" layoutX="56.0" layoutY="205.0" prefHeight="25.0" prefWidth="200.0" promptText="Flat Number - Area" />
+                        <ChoiceBox fx:id="cust_loc" layoutX="110.0" layoutY="248.0" prefWidth="150.0" />
+                        <Label layoutX="56.0" layoutY="248.0" prefHeight="25.0" prefWidth="56.0" text="Location" />
+                        <Button fx:id="cust_submit" layoutX="418.0" layoutY="282.0" mnemonicParsing="false" onAction="#save_details" prefHeight="39.0" prefWidth="108.0" text="SUBMIT">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="cust_action" layoutX="56.0" layoutY="291.0" prefHeight="25.0" prefWidth="327.0" />
+                     </children></AnchorPane>
+                </content>
+            </Tab>
+        </tabs>
+      
+      </TabPane>
+   </children>
+</AnchorPane>

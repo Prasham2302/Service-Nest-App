@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ServiceProviderController">
+    <stylesheets>
+        <URL value="@serviceprovider.css" />
+    </stylesheets>
+   <children>
+      <TabPane layoutX="28.0" layoutY="15.0" prefHeight="371.0" prefWidth="559.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="ServiceProvider">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="prof_name" layoutX="42.0" layoutY="28.0" promptText="Full Name" />
+                        <TextField fx:id="prof_email" layoutX="42.0" layoutY="68.0" prefHeight="25.0" prefWidth="232.0" promptText="Email Address" />
+                        <TextField fx:id="prof_age" layoutX="42.0" layoutY="113.0" prefHeight="25.0" prefWidth="47.0" promptText="Age" />
+                        <ChoiceBox fx:id="prof_gender" layoutX="187.0" layoutY="113.0" prefWidth="150.0" />
+                        <Label layoutX="131.0" layoutY="113.0" prefHeight="25.0" prefWidth="56.0" text="Gender :-" />
+                        <TextField fx:id="prof_mob" layoutX="42.0" layoutY="157.0" prefHeight="25.0" prefWidth="129.0" promptText="Mob No." />
+                        <TextField fx:id="prof_add" layoutX="42.0" layoutY="205.0" prefHeight="25.0" prefWidth="200.0" promptText="Flat Number - Area" />
+                        <Label layoutX="406.0" layoutY="21.0" prefHeight="26.0" prefWidth="78.0" text="Location : ">
+                           <font>
+                              <Font size="15.0" />
+                           </font></Label>
+                        <Button fx:id="prof_submit" layoutX="414.0" layoutY="281.0" mnemonicParsing="false" onAction="#sign_up" prefHeight="39.0" prefWidth="108.0" text="SUBMIT">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="prof_action" layoutX="42.0" layoutY="291.0" prefHeight="25.0" prefWidth="327.0" />
+                        <Button fx:id="new_otpg" layoutX="438.0" layoutY="218.0" mnemonicParsing="false" onAction="#validate_otp" prefHeight="25.0" prefWidth="106.0" text="Generate otp" />
+                        <PasswordField fx:id="prof_otp" layoutX="353.0" layoutY="218.0" prefHeight="26.0" prefWidth="92.0" />
+                        <CheckBox fx:id="east" layoutX="406.0" layoutY="59.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="94.0" text="EAST" />
+                        <CheckBox fx:id="west" layoutX="408.0" layoutY="85.0" mnemonicParsing="false" text="WEST" />
+                        <CheckBox fx:id="north" layoutX="407.0" layoutY="117.0" mnemonicParsing="false" text="NORTH" />
+                        <CheckBox fx:id="central" layoutX="409.0" layoutY="148.0" mnemonicParsing="false" text="CENTRAL" />
+                        <CheckBox fx:id="south" layoutX="408.0" layoutY="174.0" mnemonicParsing="false" text="SOUTH" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
