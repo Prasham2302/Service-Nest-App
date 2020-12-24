@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PLoginController">
+    <stylesheets>
+        <URL value="@plogin.css" />
+    </stylesheets>
+   <children>
+      <TabPane layoutX="28.0" layoutY="15.0" prefHeight="371.0" prefWidth="559.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="LOGIN">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="login_id" layoutX="169.0" layoutY="100.0" prefHeight="34.0" prefWidth="149.0" promptText="unique id" />
+                        <Button fx:id="login_button" layoutX="202.0" layoutY="207.0" mnemonicParsing="false" onAction="#login" prefHeight="25.0" prefWidth="83.0" text="LOGIN" />
+                        <PasswordField fx:id="old_otp" layoutX="145.0" layoutY="157.0" prefHeight="26.0" prefWidth="98.0" promptText="OTP" />
+                        <Button fx:id="old_otpg" layoutX="243.0" layoutY="157.0" mnemonicParsing="false" onAction="#validate_otp" prefHeight="26.0" prefWidth="112.0" text="Generate Otp" />
+                        <TextField fx:id="login_msg" layoutX="163.0" layoutY="264.0" prefHeight="25.0" prefWidth="183.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Daily worker">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="work_fees" layoutX="49.0" layoutY="144.0" promptText="Consultation fees" />
+                        <TextField fx:id="work_exp" layoutX="49.0" layoutY="190.0" prefHeight="25.0" prefWidth="129.0" promptText="Experience" />
+                        <ChoiceBox fx:id="choose_work" layoutX="159.0" layoutY="92.0" prefWidth="150.0" />
+                        <Button fx:id="work_next" layoutX="51.0" layoutY="240.0" mnemonicParsing="false" onAction="#psign_up" prefHeight="39.0" prefWidth="108.0" text="Next">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Button>
+                        <Text layoutX="49.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Profession :  ">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="39.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DAILY WORKER">
+                           <font>
+                              <Font size="35.0" />
+                           </font>
+                        </Text>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Medical">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="med_add" layoutX="235.0" layoutY="209.0" promptText="Clinic Address" />
+                        <TextField fx:id="med_fees" layoutX="52.0" layoutY="209.0" prefHeight="25.0" prefWidth="150.0" promptText="Fees_Per_Visit" />
+                        <TextField fx:id="med_spec" layoutX="56.0" layoutY="144.0" prefHeight="25.0" prefWidth="72.0" promptText="Speciality" />
+                        <ChoiceBox fx:id="choose_med" layoutX="170.0" layoutY="85.0" prefWidth="150.0" />
+                        <TextField fx:id="med_exp" layoutX="170.0" layoutY="144.0" prefHeight="25.0" prefWidth="129.0" promptText="Experience" />
+                        <Button fx:id="med_next" layoutX="56.0" layoutY="256.0" mnemonicParsing="false" onAction="#psign_up" prefHeight="39.0" prefWidth="108.0" text="NEXT">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Button>
+                        <Text layoutX="51.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MEDICAL">
+                           <font>
+                              <Font size="35.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="51.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Profession :  ">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Tutors">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="tut_fees" layoutX="56.0" layoutY="105.0" promptText="Fees_Per_Month" />
+                        <TextField fx:id="tut_exp" layoutX="56.0" layoutY="157.0" prefHeight="25.0" prefWidth="147.0" promptText="Experience" />
+                        <TextField fx:id="tut_qual" layoutX="55.0" layoutY="203.0" prefHeight="25.0" prefWidth="150.0" promptText="Qualification" />
+                        <Button fx:id="tut_next" layoutX="56.0" layoutY="245.0" mnemonicParsing="false" onAction="#psign_up" prefHeight="39.0" prefWidth="108.0" text="NEXT">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Button>
+                        <CheckBox fx:id="maths" layoutX="278.0" layoutY="216.0" mnemonicParsing="false" text="Maths" />
+                        <CheckBox fx:id="science" layoutX="280.0" layoutY="118.0" mnemonicParsing="false" text="Science" />
+                        <CheckBox fx:id="sst" layoutX="378.0" layoutY="118.0" mnemonicParsing="false" text="Social Science" />
+                        <CheckBox fx:id="hindi" layoutX="280.0" layoutY="148.0" mnemonicParsing="false" text="Hindi" />
+                        <CheckBox fx:id="english" layoutX="377.0" layoutY="148.0" mnemonicParsing="false" text="English" />
+                        <CheckBox fx:id="economics" layoutX="280.0" layoutY="183.0" mnemonicParsing="false" text="Economics" />
+                        <CheckBox fx:id="cs" layoutX="378.0" layoutY="183.0" mnemonicParsing="false" text="Computer Science" />
+                        <Text layoutX="58.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TUTOR">
+                           <font>
+                              <Font size="35.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="280.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subjects : ">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Laboratories">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="lab_name" layoutX="56.0" layoutY="91.0" promptText="Lab Name" />
+                        <TextField fx:id="morning_time" layoutX="172.0" layoutY="203.0" prefHeight="25.0" prefWidth="143.0" promptText="Morning Timings hh-hh" />
+                        <TextField fx:id="evening_time" layoutX="337.0" layoutY="203.0" prefHeight="25.0" prefWidth="143.0" promptText="Evening Timings hh-hh" />
+                        <ChoiceBox fx:id="lab_loc" layoutX="204.0" layoutY="144.0" prefWidth="150.0" />
+                        <Button fx:id="lab_next" layoutX="56.0" layoutY="254.0" mnemonicParsing="false" onAction="#psign_up" prefHeight="39.0" prefWidth="108.0" text="NEXT">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Button>
+                        <Text layoutX="56.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LABORATORY">
+                           <font>
+                              <Font size="35.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="63.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Timings : ">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="63.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Location : ">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="BookStores">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="store_time" layoutX="159.0" layoutY="80.0" prefHeight="27.0" prefWidth="97.0" promptText="Timings hh-hh" />
+                        <ChoiceBox fx:id="store_sec" layoutX="273.0" layoutY="252.0" prefHeight="25.0" prefWidth="93.0" />
+                        <Button fx:id="store_next" layoutX="412.0" layoutY="230.0" mnemonicParsing="false" onAction="#psign_up" prefHeight="39.0" prefWidth="108.0" text="NEXT">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Button>
+                        <ChoiceBox fx:id="store_stat" layoutX="272.0" layoutY="210.0" prefHeight="25.0" prefWidth="95.0" />
+                        <ChoiceBox fx:id="store_don" layoutX="353.0" layoutY="170.0" prefHeight="25.0" prefWidth="96.0" />
+                        <ChoiceBox fx:id="store_loc" layoutX="160.0" layoutY="122.0" prefHeight="25.0" prefWidth="96.0" />
+                        <Text layoutX="52.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BOOKSTORES">
+                           <font>
+                              <Font size="35.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="51.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Timings : ">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="53.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Location : ">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="53.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Second hand book accepted : ">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="53.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Stationary Available : ">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="50.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Donations Accepted : ">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
